@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+
+  db:
+    image: postgres:12-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: Ekaterina
+      POSTGRES_PASSWORD: 1234example
+      POSTGRES_DB: db
+
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
